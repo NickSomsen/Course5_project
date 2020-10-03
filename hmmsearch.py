@@ -3,8 +3,13 @@ from sys import argv
 
 
 def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, database):
-    """
+    """ function that searches a database with a hmm profile
+    input: hmm_input - a file containing a hmm profile
+           hmmsearch_output_alignment - a file where the MSA of the results should be written to
+           hmmsearch_output_summary - a file where the results of database search should be written to
+           database - a file that functions as the database that will be searched against with the hmm profile
 
+   output: -
     """
 
     if os.path.isfile(hmm_input):  # het hmm profiel bestaat, hmmsearch kan worden uitgevoerd

@@ -3,9 +3,11 @@ from sys import argv
 
 
 def hmmbuild(msa_input, hmm_output):
-    """
+    """ function that creates a hmm profile from a multiple sequence alignment
+    input: msa_input - a file containing a multiple sequence alignment
+           hmm_output - name of file where hmm profile should be written to
 
-
+    output: -
     """
     replace_header(msa_input) # dit is trouwens alleen nodig als we een clustal input geven, niet bij een Stockholm input
     if os.path.isfile(hmm_output):  # file bestaat al
@@ -17,9 +19,10 @@ def hmmbuild(msa_input, hmm_output):
 
 
 def replace_header(msa_input):
-    """
+    """ function that replaces the original file header, with a compatible header
+    input: msa_input - a file containing a multiple sequence alignment
 
-
+    output: -
     """
     with open(msa_input, "r") as inFile:
         all_lines = inFile.readlines()
