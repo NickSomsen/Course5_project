@@ -9,7 +9,7 @@ def hmmbuild(msa_input, hmmbuild_output):
 
     output: -
     """
-    replace_header(msa_input)  # alleen nodig als de input clustal format is. Als de eerste iteratie is geweest, hoeft deze functie niet meer te worden aangeroepen denk ik
+    # replace_header(msa_input)  # alleen nodig als de input clustal format is, maar we gaan nu dus voor Fasta omdat dat dan niet hoeft
 
     if os.path.isfile(hmmbuild_output):  # file bestaat al
         print("hmm file already exists")
@@ -18,25 +18,21 @@ def hmmbuild(msa_input, hmmbuild_output):
         print("hmmbuild was successful")
 
 
-def replace_header(msa_input):
-    """ function that replaces the original file header, with a compatible header
-    input: msa_input - a file containing a multiple sequence alignment
-
-    output: -
-    """
-    with open(msa_input, "r") as inFile:
-        all_lines = inFile.readlines()
-    # net als t-coffe, gaf hmmbuild ook een error dat hij de clustal header niet herkent. Ik heb toen gewoon weer die
-    # header van het voorbeeld van t-coffe gepakt, en die wordt dan in het bestand gezet, in plaats van de originele header
-    all_lines[0] = all_lines[0].replace(all_lines[0], "CLUSTAL W (1.82) multiple sequence alignment\n")
-
-    with open(msa_input, "w") as inFile:
-        # het bestand wordt overschreven met de vervangende header. Dit kost dus wel wat tijd bij grotere bestanden,
-        # maar na de eerste iteratie hoeft dit niet meer te worden gedaan, omdat de resultaten dan wel een goede header
-        # hebben (kun je misschien reguleren met een boolean, maar je kunt misschien ook de header in het bestand
-        # handmatig één keer aanpassen en dan deze hele functie gewoon weghalen)
-        for line in all_lines:
-            inFile.write(line)
+# def replace_header(msa_input):  # deze functie is niet meer nodig als we met fasta format gaan werken
+#     """ function that replaces the original file header, with a compatible header
+#     input: msa_input - a file containing a multiple sequence alignment
+#
+#     output: -
+#     """
+#     with open(msa_input, "r") as inFile:
+#         all_lines = inFile.readlines()
+#     # net als t-coffe, gaf hmmbuild ook een error dat hij de clustal header niet herkent. Ik heb toen gewoon weer die
+#     # header van het voorbeeld van t-coffe gepakt, en die wordt dan in het bestand gezet, in plaats van de originele header
+#     all_lines[0] = all_lines[0].replace(all_lines[0], "CLUSTAL W (1.82) multiple sequence alignment\n")
+#
+#     with open(msa_input, "w") as inFile:  # het bestand wordt herschreven met de nieuwe header
+#         for line in all_lines:
+#             inFile.write(line)
 
 
 def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, database):
