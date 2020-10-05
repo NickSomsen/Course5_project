@@ -29,7 +29,6 @@ def hmmbuild(msa_input, hmmbuild_output):
     """
     # replace_header(msa_input)
     # Alleen nodig als de input clustal format is.
-    # Als de eerste iteratie is geweest, hoeft deze functie niet meer te worden aangeroepen denk ik
 
     if os.path.isfile(hmmbuild_output):  # file bestaat al
         print("HMM file already exists")
@@ -53,11 +52,6 @@ def replace_header(msa_input):
     all_lines[0] = all_lines[0].replace(all_lines[0], "CLUSTAL W (1.82) multiple sequence alignment\n")
 
     with open(msa_input, "w") as inFile:
-        # Het bestand wordt overschreven met de vervangende header. Dit kost dus wel wat tijd bij grotere bestanden,
-        # Maar na de eerste iteratie hoeft dit niet meer te worden gedaan,
-        # Omdat de resultaten dan wel een goede header hebben
-        # (Dit kun je misschien reguleren met een boolean, maar je kunt misschien ook de header in het bestand
-        # Handmatig één keer aanpassen en dan deze hele functie gewoon weghalen).
         for line in all_lines:
             inFile.write(line)
 
@@ -71,14 +65,12 @@ def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, d
     database - a file that functions as the database that will be searched against with the hmm profile
     output: -
     """
-    if os.path.isfile(hmm_input):
-        # het hmm profiel bestaat, hmmsearch kan worden uitgevoerd
+    if os.path.isfile(hmm_input):  # het hmm profiel bestaat, hmmsearch kan worden uitgevoerd
         if os.path.isfile(hmmsearch_output_alignment) or os.path.isfile(hmmsearch_output_summary):
             # De output bestanden bestaan al
             print("hmmsearch result files already exist")
             pass
         else:
-            # hmmsearch kun je op meerdere manieren doen, en beide geven interessante input:
             # de eerste manier waarbij je, als het goed is, een MSA van de resultaten terug krijgt
             e = os.system("hmmsearch -A {} {} {}".format(hmmsearch_output_alignment, hmm_input, database))
             print("hmmsearch alignment file acquired successfully ")
@@ -89,7 +81,7 @@ def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, d
             print("hmmsearch summary file acquired successfully")
 
     else:
-        print("Could not find hmm profile, hmmsearch failed")
+        print("Could not find hmm profile, hmmbuild failed")
 
 
 def main():
@@ -102,7 +94,7 @@ def main():
         # Het de bestands naam waarin de msa wordt afgeschreven (zonder extensie)
         hmmsearch_output_file = argv[3]
         # De naam voor de hmmsearch output bestanden (zonder extensie)
-        database = argv[3]
+        database = argv[4]
         # De database waarin gezocht moet worden
 
         mafft(fasta_input, msa_input)
@@ -117,17 +109,10 @@ def main():
 
         hmmsearch(hmmbuild_output, hmmsearch_output_alignment, hmmsearch_output_summary, database)
 
-        # Mocht je het script willen testen: python3 hmmtools.py globins_test.fa globins_hmmsearch globins45.fa
-        # Wanneer het hele script dan is gerunt, heb je dus in totaal de volgende bestanden:
-        # - je MSA input
-        # - hmm profiel van hmmbuild
-        # - hmmsearch alignment bestand
-        # - hmmsearch summary bestand
-        # (- je database)
-
     except IndexError:
         print("Incorrect number of command line arguments."
-              "\nUsage: python3 hmmtools.py [msa_input] [hmmsearch_output (no extensions)] [database]")
+              "\nUsage: python3 hmmtools.py [msa_input (fasta format)] [msa_output]"
+              "[hmmsearch_output (no extensions)] [database]")
 
 
 main()
