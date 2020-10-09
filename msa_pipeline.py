@@ -72,7 +72,7 @@ def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, d
             pass
         else:
             # de eerste manier waarbij je, als het goed is, een MSA van de resultaten terug krijgt
-            e = os.system("hmmsearch -A {} {} {}".format(hmmsearch_output_alignment, hmm_input, database))
+            e = os.system("hmmsearch --noali -A {} {} {}".format(hmmsearch_output_alignment, hmm_input, database))
             print("hmmsearch alignment file acquired successfully ")
 
             # de tweede manier waarbij je een duidelijk overzicht krijgt van elke alignment, en onder andere het totaal
