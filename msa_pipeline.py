@@ -3,19 +3,18 @@ import subprocess
 from sys import argv
 
 
-def mafft(fasta_input, msa_input):
+def mafft(fasta_input, msa_output):
     """ Calls the system to execute a command in the terminal to start MAFFT and does a MSA
     input:
     fasta_input - A file that contains the fasta sequences that you want to align
-    msa_input - This is the name of the file that you want the MSA output file to have
+    msa_output - This is the name of the file that you want the MSA output file to have
     output: -
     """
-    if os.path.isfile(msa_input):
+    if os.path.isfile(msa_output):
         print("MSA file already exists")
         pass
     else:
-        cmd = '/usr/bin/mafft --auto --inputorder "{}" > "{}"'.format(fasta_input, msa_input)
-        e = subprocess.check_call(cmd, shell=True)
+        e = os.system('/usr/bin/mafft --auto --inputorder "{}" > "{}"'.format(fasta_input, msa_output))
         print("MSA was successful")
     return
 
@@ -65,12 +64,14 @@ def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, d
     database - a file that functions as the database that will be searched against with the hmm profile
     output: -
     """
-    if os.path.isfile(hmm_input):  # het hmm profiel bestaat, hmmsearch kan worden uitgevoerd
+    if os.path.isfile(hmm_input):
+        # het hmm profiel bestaat, hmmsearch kan worden uitgevoerd
         if os.path.isfile(hmmsearch_output_alignment) or os.path.isfile(hmmsearch_output_summary):
             # De output bestanden bestaan al
             print("hmmsearch result files already exist")
             pass
         else:
+            # hmmsearch kun je op meerdere manieren doen, en beide geven interessante input:
             # de eerste manier waarbij je, als het goed is, een MSA van de resultaten terug krijgt
             e = os.system("hmmsearch --noali -A {} {} {}".format(hmmsearch_output_alignment, hmm_input, database))
             print("hmmsearch alignment file acquired successfully ")
@@ -81,7 +82,28 @@ def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, d
             print("hmmsearch summary file acquired successfully")
 
     else:
-        print("Could not find hmm profile, hmmbuild failed")
+        print("Could not find hmm profile, hmmsearch failed")
+
+
+def hmmsearch_to_fasta(fasta_results, hmmsearch_output):
+    """ Converts the hmmsearch_output from stockholm to fasta using esl-reformat
+    input:
+    fasta_results - Name of the file the fasta sequences should be written to
+    hmmsearch_output - A stockholm format file containing the results of a hmmsearch
+    output: -
+    """
+    fasta_results = fasta_results + ".fa"
+    if not os.path.isfile(hmmsearch_output):
+        # Hmmsearch output bestaat niet
+        print("Could not find hmmsearch alignment file, conversion failed")
+        pass
+    elif os.path.isfile(fasta_results):
+        # Er is al een bestand met deze naam
+        print("fasta_results file already exists")
+        pass
+    else:
+        e = os.system("./esl-reformat -o {} -u fasta {}".format(fasta_results, hmmsearch_output))
+        print("hmmsearch output successfully converted to fasta format for new iteration")
 
 
 def main():
@@ -90,29 +112,33 @@ def main():
     try:
         fasta_input = argv[1]
         # Het fasta bestand dat je gebruikt voor de msa
-        msa_input = argv[2]
-        # Het de bestands naam waarin de msa wordt afgeschreven (zonder extensie)
+        msa_output = argv[2]
+        # De bestandsnaam waarin de msa wordt afgeschreven (zonder extensie)
         hmmsearch_output_file = argv[3]
         # De naam voor de hmmsearch output bestanden (zonder extensie)
         database = argv[4]
         # De database waarin gezocht moet worden
+        fasta_results = argv[5]
+        # De naam voor het multiple fasta bestand met de fasta sequenties van je hmmsearch (zonder extensie)
 
-        mafft(fasta_input, msa_input)
+        mafft(fasta_input, msa_output)
 
         # Zodat je in de command line niet zo veel input hoeft te geven,
         # wordt er door het script zelf output bestanden gemaakt.
-        hmmbuild_output = msa_input.split(".")[0] + ".hmm"
+        hmmbuild_output = msa_output.split(".")[0] + ".hmm"
         hmmsearch_output_alignment = hmmsearch_output_file + ".hmmsearch_alignment"
-        hmmsearch_output_summary = hmmsearch_output_file + ".hmmsearch.summary"
+        hmmsearch_output_summary = hmmsearch_output_file + ".hmmsearch_summary"
 
-        hmmbuild(msa_input, hmmbuild_output)
+        hmmbuild(msa_output, hmmbuild_output)
 
         hmmsearch(hmmbuild_output, hmmsearch_output_alignment, hmmsearch_output_summary, database)
 
+        hmmsearch_to_fasta(fasta_results, hmmsearch_output_alignment)
+
     except IndexError:
         print("Incorrect number of command line arguments."
-              "\nUsage: python3 hmmtools.py [msa_input (fasta format)] [msa_output]"
-              "[hmmsearch_output (no extensions)] [database]")
+              "\nUsage: python3 msa_pipeline.py [fasta_input (fasta format)] [msa_output (no extensions)] "
+              "[hmmsearch_output (no extensions)] [database] [fasta_results (no extensions)]")
 
 
 main()

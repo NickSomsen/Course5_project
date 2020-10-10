@@ -1,0 +1,843 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3 (Nov 2019); http://hmmer.org/
+# Copyright (C) 2019 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  globins_msa.hmm
+# target sequence database:        globins45.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       globins_msa  [M=149]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.5e-68  219.5   0.1      5e-68  219.4   0.1    1.0  1  HBB_MANSP   
+    4.6e-68  219.5   0.1    5.1e-68  219.4   0.1    1.0  1  HBB_URSMA   
+    6.2e-67  215.9   0.1    6.9e-67  215.7   0.1    1.0  1  HBB_CALAR   
+    2.3e-65  210.8   0.8    2.5e-65  210.6   0.8    1.0  1  HBB_RABIT   
+    2.7e-65  210.6   0.1    2.9e-65  210.4   0.1    1.0  1  HBB_COLLI   
+      1e-64  208.7   0.1    1.1e-64  208.5   0.1    1.0  1  HBB_LARRI   
+    2.2e-64  207.6   0.5    2.5e-64  207.4   0.5    1.0  1  HBE_PONPY   
+    3.4e-64  207.0   0.1    3.8e-64  206.8   0.1    1.0  1  HBB_TRIIN   
+    6.9e-64  206.0   0.1    7.6e-64  205.8   0.1    1.0  1  HBB_SUNMU   
+      2e-62  201.2   0.1    2.3e-62  201.0   0.1    1.0  1  HBB_EQUHE   
+    4.5e-62  200.1   0.4      5e-62  199.9   0.4    1.0  1  HBB_SPETO   
+    5.9e-62  199.7   0.4    6.6e-62  199.5   0.4    1.0  1  HBB_TACAC   
+    1.4e-61  198.5   0.7    1.6e-61  198.3   0.7    1.0  1  HBB_SPECI   
+    1.4e-61  198.5   0.0    1.6e-61  198.3   0.0    1.0  1  HBB_ORNAN   
+    1.6e-61  198.3   0.0    1.7e-61  198.2   0.0    1.0  1  HBB_TUPGL   
+    8.4e-57  183.0   0.0    9.3e-57  182.8   0.0    1.0  1  HBB1_VAREX  
+    8.6e-55  176.4   0.8    9.6e-55  176.3   0.8    1.0  1  MYG_SAISC   
+    3.4e-53  171.3   0.2    3.8e-53  171.1   0.2    1.0  1  MYG_PROGU   
+    8.6e-53  170.0   1.1    9.6e-53  169.8   1.1    1.0  1  MYG_LYCPI   
+    2.5e-52  168.5   0.3    2.7e-52  168.3   0.3    1.0  1  HBBL_RANCA  
+    3.3e-52  168.1   1.9    3.7e-52  167.9   1.9    1.0  1  MYG_ESCGI   
+    1.1e-51  166.4   0.2    1.2e-51  166.2   0.2    1.0  1  MYG_MOUSE   
+      2e-51  165.5   0.6    2.2e-51  165.4   0.6    1.0  1  MYG_HORSE   
+    9.1e-48  153.6   1.0      1e-47  153.5   1.0    1.0  1  HBB2_XENTR  
+    7.2e-36  115.0   0.0      8e-36  114.9   0.0    1.0  1  HBB2_TRICR  
+    3.2e-35  112.9   0.1    3.7e-35  112.7   0.1    1.1  1  HBAZ_HORSE  
+    6.6e-35  111.9   0.5    7.6e-35  111.7   0.5    1.1  1  HBAD_CHLME  
+    2.1e-33  107.1   0.1    2.4e-33  106.9   0.1    1.0  1  HBAD_PASMO  
+    2.1e-32  103.8   0.1    2.4e-32  103.6   0.1    1.0  1  HBA_MESAU   
+    4.9e-32  102.6   0.1    5.5e-32  102.4   0.1    1.0  1  HBA4_SALIR  
+    3.8e-31   99.7   0.6    4.3e-31   99.5   0.6    1.0  1  HBA_PONPY   
+    4.5e-31   99.5   0.0    5.2e-31   99.3   0.0    1.1  1  HBA_ERIEU   
+    6.5e-31   99.0   0.2    7.4e-31   98.8   0.2    1.0  1  HBA2_BOSMU  
+    5.4e-30   96.0   0.1      6e-30   95.8   0.1    1.0  1  HBA_AILME   
+    9.5e-30   95.2   0.2    1.1e-29   95.0   0.2    1.0  1  HBA_MACFA   
+      1e-29   95.1   0.3    1.1e-29   95.0   0.3    1.0  1  MYG_MUSAN   
+    1.1e-29   94.9   0.2    1.3e-29   94.7   0.2    1.0  1  HBA_MACSI   
+    1.6e-29   94.4   0.1    1.8e-29   94.2   0.1    1.0  1  HBA_FRAPO   
+    1.9e-29   94.2   0.4    2.2e-29   94.0   0.4    1.0  1  HBA2_GALCR  
+    2.4e-29   93.9   0.3    2.7e-29   93.7   0.3    1.0  1  HBA_PAGLA   
+      1e-28   91.8   0.1    1.2e-28   91.6   0.1    1.0  1  HBA_PHACO   
+    1.9e-28   91.0   0.0    2.1e-28   90.8   0.0    1.0  1  HBA_PROLO   
+      6e-28   89.3   0.3    6.8e-28   89.1   0.3    1.0  1  HBA_ANSSE   
+    3.5e-27   86.9   0.1    3.9e-27   86.7   0.1    1.0  1  HBA_COLLI   
+    5.4e-27   86.2   0.1    6.3e-27   86.0   0.1    1.1  1  HBA_TRIOC   
+
+
+Domain annotation for each sequence (and alignments):
+>> HBB_MANSP  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  219.4   0.1     5e-68     5e-68       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 219.4 bits;  conditional E-value: 5e-68
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+lt eek +v+++wgkv++d  evg+e+l+rll+v+P+tq++Fds+++lsspdav++npk+kaHgkkvl a+sd+l++ldnl++t+a+L+elH+dkl
+    HBB_MANSP   1 VHLTPEEKTAVTTLWGKVNVD--EVGGEALGRLLVVYPWTQRFFDSFGDLSSPDAVMGNPKVKAHGKKVLGAFSDGLNHLDNLKGTFAQLSELHCDKL 96 
+                  8********************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l++vl++++gkeftp+vqaA++k+v++va+ala+ky+
+    HBB_MANSP  97 HVDPENFKLLGNVLVCVLAHHFGKEFTPQVQAAYQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_URSMA  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  219.4   0.1   5.1e-68   5.1e-68       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 219.4 bits;  conditional E-value: 5.1e-68
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+lt eek+lv+ +wgkv++d  evg+e+l+rll+v+P+tq++Fds+++lss+da+++npk+kaHgkkvl+++sd+lknldnl++t+a+L+elH+dkl
+    HBB_URSMA   1 VHLTGEEKSLVTGLWGKVNVD--EVGGEALGRLLVVYPWTQRFFDSFGDLSSADAIMNNPKVKAHGKKVLNSFSDGLKNLDNLKGTFAKLSELHCDKL 96 
+                  8********************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l++vl++++gkeftp+vqaA++k+v++va+ala+ky+
+    HBB_URSMA  97 HVDPENFKLLGNVLVCVLAHHFGKEFTPQVQAAYQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_CALAR  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  215.7   0.1   6.9e-67   6.9e-67       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 215.7 bits;  conditional E-value: 6.9e-67
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+lt eek++v+++wgkv++d  evg+e+l+rll+v+P+tq++F+s+++ls+pdav++npk+kaHgkkvl a+sd+l++ldnl++t+a+L+elH+dkl
+    HBB_CALAR   1 VHLTGEEKSAVTALWGKVNVD--EVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMNNPKVKAHGKKVLGAFSDGLTHLDNLKGTFAHLSELHCDKL 96 
+                  8********************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l++vl++++gkeftp vqaA++k+v++va+ala+ky+
+    HBB_CALAR  97 HVDPENFRLLGNVLVCVLAHHFGKEFTPVVQAAYQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_RABIT  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  210.6   0.8   2.5e-65   2.5e-65       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 210.6 bits;  conditional E-value: 2.5e-65
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+l+ eek++v+++wgkv+++  evg+e+l+rll+v+P+tq++F+s+++lss++av++npk+kaHgkkvl+a+s++l +ldnl++t+a+L+elH+dkl
+    HBB_RABIT   1 VHLSSEEKSAVTALWGKVNVE--EVGGEALGRLLVVYPWTQRFFESFGDLSSANAVMNNPKVKAHGKKVLAAFSEGLSHLDNLKGTFAKLSELHCDKL 96 
+                  8********************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l++vl +++gkeftp+vqaA++k+v++va+ala+ky+
+    HBB_RABIT  97 HVDPENFRLLGNVLVIVLSHHFGKEFTPQVQAAYQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_COLLI  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  210.4   0.1   2.9e-65   2.9e-65       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 210.4 bits;  conditional E-value: 2.9e-65
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v++++eek+l++++wgkv+++  ++g+e+larll+v+P+tq++F+s++nlss++a+ +np++kaHgkkvlt+++da+knldn+++t+a+L+elH+dkl
+    HBB_COLLI   1 VHWSAEEKQLITSIWGKVNVA--DCGAEALARLLIVYPWTQRFFSSFGNLSSATAISGNPNVKAHGKKVLTSFGDAVKNLDNIKGTFAQLSELHCDKL 96 
+                  8*******************9..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l+++l++++gk+ftp++qaAw+k+v+ va+ala+ky+
+    HBB_COLLI  97 HVDPENFRLLGDILVIILAAHFGKDFTPECQAAWQKLVRVVAHALARKYH 146
+                  *************************************************8 PP
+
+>> HBB_LARRI  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  208.5   0.1   1.1e-64   1.1e-64       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 208.5 bits;  conditional E-value: 1.1e-64
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v++++eek+l++ +wgkv+++  ++g+e+larll+v+P+tq++F+s++nlssp+a+ +np+++aHgkkvlt++++a+knldn+++t+a+L+elH+dkl
+    HBB_LARRI   1 VHWSAEEKQLITGLWGKVNVA--DCGAEALARLLIVYPWTQRFFASFGNLSSPTAINGNPMVRAHGKKVLTSFGEAVKNLDNIKNTFAQLSELHCDKL 96 
+                  8*******************9..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l++vl+++++k+ftp+ qaAw+k+v+ va+ala+ky+
+    HBB_LARRI  97 HVDPENFRLLGDILIIVLAAHFAKDFTPDSQAAWQKLVRVVAHALARKYH 146
+                  *************************************************8 PP
+
+>> HBE_PONPY  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  207.4   0.5   2.5e-64   2.5e-64       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 207.4 bits;  conditional E-value: 2.5e-64
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v++t+eeka+v+++w k++++  e g+e+l+rll+v+P+tq++Fds++nlssp+a+l+npk+kaHgkkvlt+++da+kn+dnl++t+a+L+elH+dkl
+    HBE_PONPY   1 VHFTAEEKAAVTSLWSKMNVE--EAGGEALGRLLVVYPWTQRFFDSFGNLSSPSAILGNPKVKAHGKKVLTSFGDAIKNMDNLKTTFAKLSELHCDKL 96 
+                  8********************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++++++l+ ++gkeftp+vqaAw+k+v +va ala+ky+
+    HBE_PONPY  97 HVDPENFKLLGNVMVIILATHFGKEFTPEVQAAWQKLVSAVAIALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_TRIIN  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  206.8   0.1   3.8e-64   3.8e-64       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 206.8 bits;  conditional E-value: 3.8e-64
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+lt eekalv  +w+kv+++  e+g+e+l+rll+v+P+tq++F+ +++lss++a+++npk+kaHg+kv+t+++d+lk+l++l++ +a+L+elH+dkl
+    HBB_TRIIN   1 VHLTPEEKALVIGLWAKVNVK--EYGGEALGRLLVVYPWTQRFFEHFGDLSSASAIMNNPKVKAHGEKVFTSFGDGLKHLEDLKGAFAELSELHCDKL 96 
+                  8********************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l++vl++++gkef+p++qaA++k+v++va+ala+ky+
+    HBB_TRIIN  97 HVDPENFRLLGNVLVCVLARHFGKEFSPEAQAAYQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_SUNMU  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  205.8   0.1   7.6e-64   7.6e-64       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 205.8 bits;  conditional E-value: 7.6e-64
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+l+ eeka v+ +wgkv++d  evg+e+l+rll+v+P+tq++Fds+++lss++av++npk+kaHgkkvl +l+++++nldnl++t+a+L+elH+dkl
+    HBB_SUNMU   1 VHLSGEEKACVTGLWGKVNED--EVGAEALGRLLVVYPWTQRFFDSFGDLSSASAVMGNPKVKAHGKKVLHSLGEGVANLDNLKGTFAKLSELHCDKL 96 
+                  89*******************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l+ vl++k+gkeftp+vqaA++k+v++va+ala+ky+
+    HBB_SUNMU  97 HVDPENFRLLGNVLVVVLASKFGKEFTPPVQAAFQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_EQUHE  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  201.0   0.1   2.3e-62   2.3e-62       2     149 .]       1     146 []       1     146 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 201.0 bits;  conditional E-value: 2.3e-62
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+l+ eeka+vl++w kv+++  evg+e+l+rll+v+P+tq++Fds+++ls+p av++npk+kaHgkkvl ++++++ +ldnl++t+a+L+elH+dkl
+    HBB_EQUHE   1 VQLSGEEKAAVLALWDKVNEE--EVGGEALGRLLVVYPWTQRFFDSFGDLSNPAAVMGNPKVKAHGKKVLHSFGEGVHHLDNLKGTFAQLSELHCDKL 96 
+                  7899*****************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l+ vl++++gk+ftp++qa ++k+v++va+ala+ky+
+    HBB_EQUHE  97 HVDPENFRLLGNVLVVVLARHFGKDFTPELQASYQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_SPETO  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.9   0.4     5e-62     5e-62       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 199.9 bits;  conditional E-value: 5e-62
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+lt++ek+++++ wgkv+a+  e+g+e+l+rll+v+P+tq++Fds+++lss++av++n+k+kaHgkkv+ ++s++lk+ldnl++t+asL+elH+dkl
+    HBB_SPETO   1 VHLTDGEKNAISTAWGKVNAA--EIGAEALGRLLVVYPWTQRFFDSFGDLSSASAVMGNAKVKAHGKKVIDSFSNGLKHLDNLKGTFASLSELHCDKL 96 
+                  8*******************9..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g+++++v+++++gk+ftp++qaA++k+v++va+al++ky+
+    HBB_SPETO  97 HVDPENFKLLGNMIVIVMAHHLGKDFTPEAQAAFQKVVAGVANALSHKYH 146
+                  *************************************************8 PP
+
+>> HBB_TACAC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.5   0.4   6.6e-62   6.6e-62       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 199.5 bits;  conditional E-value: 6.6e-62
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+l+  ek +v+++wg v+++  e g+e+l+rll+v+P+tq++F+s+++lss+dav++n+k+kaHg+kvlt+++dalknldnl++t+a+L+elH+dkl
+    HBB_TACAC   1 VHLSGSEKTAVTNLWGHVNVN--ELGGEALGRLLVVYPWTQRFFESFGDLSSADAVMGNAKVKAHGAKVLTSFGDALKNLDNLKGTFAKLSELHCDKL 96 
+                  89*******************..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+ +g++l+ vl+++++keftp++qaAw+k+v +v +ala+ky+
+    HBB_TACAC  97 HVDPENFNRLGNVLVVVLARHFSKEFTPEAQAAWQKLVSGVSHALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_SPECI  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  198.3   0.7   1.6e-61   1.6e-61       2     149 .]       1     146 []       1     146 [] 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 198.3 bits;  conditional E-value: 1.6e-61
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+l+++ek+++++ wgkv+a+  evg+e+l+rll+v+P+tq++Fds+++lss++av++n+k+kaHgkkv+ ++s++lk+ldnl++t+asL+elH+dkl
+    HBB_SPECI   1 VHLSDGEKNAISTAWGKVHAA--EVGAEALGRLLVVYPWTQRFFDSFGDLSSASAVMGNAKVKAHGKKVIDSFSNGLKHLDNLKGTFASLSELHCDKL 96 
+                  8*******************9..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g+++++v+++++gk+ftp++qaA++k+v++va+ala+ky+
+    HBB_SPECI  97 HVDPENFKLLGNMIVIVMAHHLGKDFTPEAQAAFQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB_ORNAN  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  198.3   0.0   1.6e-61   1.6e-61       2     149 .]       1     146 []       1     146 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 198.3 bits;  conditional E-value: 1.6e-61
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+l+ +ek++v+++wgkv+ +  e g+e+l+rll+v+P+tq++F+ +++lss+ av++npk+kaHg+kvlt+++dalknld+l++t+a+L+elH+dkl
+    HBB_ORNAN   1 VHLSGGEKSAVTNLWGKVNIN--ELGGEALGRLLVVYPWTQRFFEAFGDLSSAGAVMGNPKVKAHGAKVLTSFGDALKNLDDLKGTFAKLSELHCDKL 96 
+                  89*****************99..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+ +g++l+ vl+++++k+f+p+vqaAw+k+v +va+al +ky+
+    HBB_ORNAN  97 HVDPENFNRLGNVLIVVLARHFSKDFSPEVQAAWQKLVSGVAHALGHKYH 146
+                  *************************************************8 PP
+
+>> HBB_TUPGL  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  198.2   0.0   1.7e-61   1.7e-61       2     149 .]       1     146 []       1     146 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 198.2 bits;  conditional E-value: 1.7e-61
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+l+ eeka+v+ +wgkv+ +  +vg++ l++ll+v+P+tq++Fds+++lssp+av+snpk+kaHgkkvlt++sd+l++ldnl++t+a+L+elH+dkl
+    HBB_TUPGL   1 VHLSGEEKAAVTGLWGKVDLE--KVGGQSLGSLLIVYPWTQRFFDSFGDLSSPSAVMSNPKVKAHGKKVLTSFSDGLNHLDNLKGTFAKLSELHCDKL 96 
+                  89****************999..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+l+g++l+ vl+ ++g+eftp+vqaA++k+v++va+ala+ky+
+    HBB_TUPGL  97 HVDPENFRLLGNVLVRVLACNFGPEFTPQVQAAFQKVVAGVANALAHKYH 146
+                  *************************************************8 PP
+
+>> HBB1_VAREX  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  182.8   0.0   9.3e-57   9.3e-57       2     149 .]       1     146 []       1     146 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 182.8 bits;  conditional E-value: 9.3e-57
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v++t+eek+l+ ++wgk+++    +g+e la ll+ +P+tq+ F+ ++nlssp+a+ +np++kaHgkkvlt+++da+knldn+++t+a+L+elH+dkl
+   HBB1_VAREX   1 VHWTAEEKQLICSLWGKIDVG--LIGGETLAGLLVIYPWTQRQFSHFGNLSSPTAIAGNPRVKAHGKKVLTSFGDAIKNLDNIKDTFAKLSELHCDKL 96 
+                  8*****************999..9************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+ nf+l+g++l++vl++++gkeftpa +aA++k+v+ v + la+ y+
+   HBB1_VAREX  97 HVDPTNFKLLGNVLVIVLADHHGKEFTPAHHAAYQKLVNVVSHSLARRYH 146
+                  ************************************************98 PP
+
+>> MYG_SAISC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  176.3   0.8   9.6e-55   9.6e-55       4     149 .]       2     147 ..       1     147 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 176.3 bits;  conditional E-value: 9.6e-55
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+++e++lvl++wgkv+adip +g+e+l++l++ +Pet+e+Fd++++l+s+d+++++++lk+Hg +vltal+++lk+++++e++l++L+++Ha+k+k+
+    MYG_SAISC   2 LSDGEWQLVLNIWGKVEADIPSHGQEVLISLFKGHPETLEKFDKFKHLKSEDEMKASEELKKHGTTVLTALGGILKKKGQHEAELKPLAQSHATKHKI 99 
+                  899*********************************************************************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +++++el+++a+++vl+kk++++f++++q+A++ka++ +++++a kyk
+    MYG_SAISC 100 PVKYLELISDAIVHVLQKKHPGDFGADAQGAMKKALELFRNDMAAKYK 147
+                  **********************************************97 PP
+
+>> MYG_PROGU  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  171.1   0.2   3.8e-53   3.8e-53       4     149 .]       2     147 ..       1     147 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 171.1 bits;  conditional E-value: 3.8e-53
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+++e++lvl++wgkv+ d  ++g+e+l+rl++ +Pet+e+Fd++++l+ +d++ ++++lk+Hg +vltal+++lk+++++ ++la+L+++Ha+k+k+
+    MYG_PROGU   2 LSDGEWQLVLNVWGKVEGDLSGHGQEVLIRLFKGHPETLEKFDKFKHLKAEDEMRASEELKKHGTTVLTALGGILKKKGQHAAELAPLAQSHATKHKI 99 
+                  899*********************************************************************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +++++e+++ea+++vl++k++++f++++q+A+ska++ +++++a kyk
+    MYG_PROGU 100 PVKYLEFISEAIIQVLQSKHPGDFGADAQGAMSKALELFRNDIAAKYK 147
+                  **********************************************97 PP
+
+>> MYG_LYCPI  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  169.8   1.1   9.6e-53   9.6e-53       4     149 .]       2     147 ..       1     147 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 169.8 bits;  conditional E-value: 9.6e-53
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+++e+++vl++wgkv+ d +++g+e+l+rl++ +Pet+++Fd++++l+++d+++++++lk+Hg++vltal+++lk+++++e++l++L+++Ha+k+k+
+    MYG_LYCPI   2 LSDGEWQIVLNIWGKVETDLAGHGQEVLIRLFKNHPETLDKFDKFKHLKTEDEMKGSEDLKKHGNTVLTALGGILKKKGHHEAELKPLAQSHATKHKI 99 
+                  899*********************************************************************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +++++e++++a+++vl++k++++f ++++aA++ka++ +++++a kyk
+    MYG_LYCPI 100 PVKYLEFISDAIIQVLQNKHSGDFHADTEAAMKKALELFRNDIAAKYK 147
+                  **********************************************97 PP
+
+>> HBBL_RANCA  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  168.3   0.3   2.7e-52   2.7e-52       2     149 .]       1     146 []       1     146 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 168.3 bits;  conditional E-value: 2.7e-52
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v++t+eeka++ ++w+kv+++  + g e+l+rl++v+P+tq++F+ +++lssp a+ +npk++aHgkk+l a+++a+ nld++++tl  L+e Ha++l
+   HBBL_RANCA   1 VHWTAEEKAVINSVWQKVDVE--QDGHEALTRLFIVYPWTQRYFSTFGDLSSPAAIAGNPKVHAHGKKILGAIDNAIHNLDDVKGTLHDLSEEHANEL 96 
+                  8*******************9..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +vd+enf+ +ge+l+ vl +k+gk+f+p+vq  w+k ++ ++ al++ y+
+   HBBL_RANCA  97 HVDPENFRRLGEVLIVVLGAKLGKAFSPQVQHVWEKFIAVLVDALSHSYH 146
+                  ************************************************98 PP
+
+>> MYG_ESCGI  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  167.9   1.9   3.7e-52   3.7e-52       4     149 .]       2     147 ..       1     147 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 167.9 bits;  conditional E-value: 3.7e-52
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+++e++lvl++w+kv+ad++++g+ +l+rl++ +Pet+e+Fd++++l+++ +++++++lk+Hg++vltal+++lk+++++e++l++L+++Ha+k+k+
+    MYG_ESCGI   2 LSDAEWQLVLNIWAKVEADVAGHGQDILIRLFKGHPETLEKFDKFKHLKTEAEMKASEDLKKHGNTVLTALGGILKKKGHHEAELKPLAQSHATKHKI 99 
+                  799*********************************************************************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  + +++e++++a+++vl+++++++f++++qaA++ka++ +++++a kyk
+    MYG_ESCGI 100 PIKYLEFISDAIIHVLHSRHPGDFGADAQAAMNKALELFRKDIAAKYK 147
+                  **********************************************97 PP
+
+>> MYG_MOUSE  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  166.2   0.2   1.2e-51   1.2e-51       4     149 .]       2     147 ..       1     147 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 166.2 bits;  conditional E-value: 1.2e-51
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+++e++lvl++wgkv+ad +++g+e+l+ l++ +Pet+++Fd+++nl+s+++++++++lk+Hg +vltal+ +lk+++++ +++++L+++Ha+k+k+
+    MYG_MOUSE   2 LSDGEWQLVLNVWGKVEADLAGHGQEVLIGLFKTHPETLDKFDKFKNLKSEEDMKGSEDLKKHGCTVLTALGTILKKKGQHAAEIQPLAQSHATKHKI 99 
+                  899*********************************************************************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  +++++e+++e++++vlkk+++++f++++q+A+ska++ +++++a kyk
+    MYG_MOUSE 100 PVKYLEFISEIIIEVLKKRHSGDFGADAQGAMSKALELFRNDIAAKYK 147
+                  **********************************************97 PP
+
+>> MYG_HORSE  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.4   0.6   2.2e-51   2.2e-51       4     149 .]       2     147 ..       1     147 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 165.4 bits;  conditional E-value: 2.2e-51
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+++e++ vl++wgkv+adi+++g+e+l+rl+  +Pet+e+Fd++++l+++ +++++++lk+Hg  vltal+++lk+++++e++l++L+++Ha+k+k+
+    MYG_HORSE   2 LSDGEWQQVLNVWGKVEADIAGHGQEVLIRLFTGHPETLEKFDKFKHLKTEAEMKASEDLKKHGTVVLTALGGILKKKGHHEAELKPLAQSHATKHKI 99 
+                  899*********************************************************************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                  + +++e++++a+++vl++k++++f++++q+A+ ka++ +++++a kyk
+    MYG_HORSE 100 PIKYLEFISDAIIHVLHSKHPGNFGADAQGAMTKALELFRNDIAAKYK 147
+                  **********************************************97 PP
+
+>> HBB2_XENTR  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  153.5   1.0     1e-47     1e-47       2     148 ..       1     145 [.       1     146 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 153.5 bits;  conditional E-value: 1e-47
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v++t+eeka + ++wgkv+ +  + g  +l rll+v+P+tq++F+s++nls+ +av +n k+kaHg+kvl a++ a+++ld+++  l+ L+++Ha+ l
+   HBB2_XENTR   1 VHWTAEEKATIASVWGKVDIE--QDGHDALSRLLVVYPWTQRYFSSFGNLSNVSAVSGNVKVKAHGNKVLSAVGSAIQHLDDVKSHLKGLSKSHAEDL 96 
+                  8****************9888..*************************************************************************** PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  +vd+enf+ + ++l++vl++k+g +ftp+vqa w+k+ ++++aal++ y
+   HBB2_XENTR  97 HVDPENFKRLADVLVIVLAAKLGSAFTPQVQAVWEKLNATLVAALSHGY 145
+                  ***********************************************98 PP
+
+>> HBB2_TRICR  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  114.9   0.0     8e-36     8e-36       2     148 ..       1     145 []       1     145 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 114.9 bits;  conditional E-value: 8e-36
+  globins_msa   2 valteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadkl 99 
+                  v+lt+e+++ + ++ gkv++d    g++ larl++v+P+ +++F+ +++lss da+  npk+ aHg+kv+ ++ +a k+ldnl e+ a L+ +H  k 
+   HBB2_TRICR   1 VHLTAEDRKEIAAILGKVNVD--SLGGQCLARLIVVNPWSRRYFHDFGDLSSCDAICRNPKVLAHGAKVMRSIVEATKHLDNLREYYADLSVTHSLKF 96 
+                  8********************..99************************************************************************* PP
+
+  globins_msa 100 kvddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                   vd+enf+l + +++  l+  +  +f+ + q A++k++++v +al + y
+   HBB2_TRICR  97 YVDPENFKLFSGIVIVCLALTLQTDFSCHKQLAFEKLMKGVSHALGHGY 145
+                  *********************************************9987 PP
+
+>> HBAZ_HORSE  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.7   0.1   3.7e-35   3.7e-35       4     148 ..       2     140 ..       1     141 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 112.7 bits;  conditional E-value: 3.7e-35
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  lt++e+ +v ++wgk++ +   vg+e+l rl+  +P+t+ +F  +         +++p+l+aHg kv +a++da+k +dn+ + la+L+elHa  l+v
+   HBAZ_HORSE   2 LTKAERTMVVSIWGKISMQADAVGTEALQRLFSSYPQTKTYFPHFDL---H---EGSPQLRAHGSKVAAAVGDAVKSIDNVAGALAKLSELHAYILRV 93 
+                  899**************************************998843...3...579***************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf++++++ll +l+++++ +ft++++aAw+k +  v   l +ky
+   HBAZ_HORSE  94 DPVNFKFLSHCLLVTLASRLPADFTADAHAAWDKFLSIVSSVLTEKY 140
+                  ****************************************9999998 PP
+
+>> HBAD_CHLME  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  111.7   0.5   7.6e-35   7.6e-35       4     148 ..       2     140 ..       1     141 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 111.7 bits;  conditional E-value: 7.6e-35
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  lt+++k+l +++w+kv     e+g e+l r++  +P+t+ +F  +     p    ++++++ Hgkkv +al++a+k ldnl + l++L++lHa +l+v
+   HBAD_CHLME   2 LTADDKKLLTQLWEKVAGHQEEFGSEALQRMFLTYPQTKTYFPHFDL--HP----GSEQVRGHGKKVAAALGNAVKSLDNLSQALSELSNLHAYNLRV 93 
+                  8999**************************************99963..46....89***************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d++nf+l+ ++   vl+ ++gk+++p+++aA++k + +vaa la+ky
+   HBAD_CHLME  94 DPANFKLLAQCFQVVLATHLGKDYSPEMHAAFDKFLSAVAAVLAEKY 140
+                  *********************************************99 PP
+
+>> HBAD_PASMO  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  106.9   0.1   2.4e-33   2.4e-33       4     148 ..       2     140 ..       1     141 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 106.9 bits;  conditional E-value: 2.4e-33
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  lt+e+k+l++++wgk+  +  e+g+ +l r+++ +P+t+ +F  +  ls+     ++++++ Hgkkv++als+a+knldnl + l++L++lHa +l+v
+   HBAD_PASMO   2 LTAEDKKLIQQIWGKLGGAEEEIGADALWRMFHSYPSTKTYFPHFD-LSQ-----GSDQIRGHGKKVVAALSNAIKNLDNLSQALSELSNLHAYNLRV 93 
+                  89****************************************9985.443.....5899*************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf++++++l   l+ ++gke++p+v++A +k + +va  la+ky
+   HBAD_PASMO  94 DPVNFKFLSQCLQVSLATRLGKEYSPEVHSAVDKFMSAVASVLAEKY 140
+                  *********************************************99 PP
+
+>> HBA_MESAU  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  103.6   0.1   2.4e-32   2.4e-32       4     148 ..       2     140 ..       1     141 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 103.6 bits;  conditional E-value: 2.4e-32
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++++k  +++ wgk+     e+g+e+l r++ v+P t+ +F  +          +++++k Hgkkv  al++a+++ld+l + l++L++lHa kl+v
+    HBA_MESAU   2 LSAKDKTNISEAWGKIGGHAGEYGAEALERMFFVYPTTKTYFPHFDV---S---HGSAQVKGHGKKVADALTNAVGHLDDLPGALSALSDLHAHKLRV 93 
+                  789999**********************************9988753...3...478***************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+++++ +ftpav+a  +k ++ v + l +ky
+    HBA_MESAU  94 DPVNFKLLSHCLLVTLANHHPADFTPAVHASLDKFFASVSTVLTSKY 140
+                  *******************************************9999 PP
+
+>> HBA4_SALIR  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.4   0.1   5.5e-32   5.5e-32       4     148 ..       2     141 ..       1     142 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 102.4 bits;  conditional E-value: 5.5e-32
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++++ka v+++wgk+  ++ e+g ++l r+l+v+P+t+ +F+  + +  p    +++ +k+Hg ++++ ++d ++++d+l + l +L+elHa+kl+v
+   HBA4_SALIR   2 LSAKDKANVKAIWGKILPKSDEIGEQALSRMLVVYPQTKAYFSHWASV-AP----GSAPVKKHGITIMNQIDDCVGHMDDLFGFLTKLSELHATKLRV 94 
+                  8999***************************************99865.56....799**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+++ + l+ v+++ ++ eftp+++   +k ++++a ala+ky
+   HBA4_SALIR  95 DPTNFKILAHNLIVVIAAYFPAEFTPEIHLSVDKFLQQLALALAEKY 141
+                  **********************************************9 PP
+
+>> HBA_PONPY  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.5   0.6   4.3e-31   4.3e-31       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 99.5 bits;  conditional E-value: 4.3e-31
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+ ++k  v++ wgkv a   ++g+e+l r++   P t+ +F  +  ls      +++++k+Hgkkv  al++a++++d++ + l++L++lHa kl+v
+    HBA_PONPY   2 LSPADKTNVKTAWGKVGAHAGDYGAEALERMFLSFPTTKTYFPHFD-LSH-----GSAQVKDHGKKVADALTNAVAHVDDMPNALSALSDLHAHKLRV 93 
+                  67789999**********************************9985.443.....589**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+++++ eftpav+a  +k ++ v + l +ky
+    HBA_PONPY  94 DPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKY 140
+                  *******************************************9999 PP
+
+>> HBA_ERIEU  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   99.3   0.0   5.2e-31   5.2e-31       4     148 ..       2     140 ..       1     141 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 99.3 bits;  conditional E-value: 5.2e-31
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++ +ka v++ wgk+     e+g+e+l r+++ +P t+ +F  +    +p    +++++k Hgkkv  al+ a++nld++ + l++L++lHa kl+v
+    HBA_ERIEU   2 LSATDKANVKTFWGKLGGHGGEYGGEALDRMFQAHPTTKTYFPHFDL--NP----GSAQVKGHGKKVADALTTAVNNLDDVPGALSALSDLHAHKLRV 93 
+                  678899************************************99853..56....89***************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+ +++ +ftpav+a  +k +++va+ l +ky
+    HBA_ERIEU  94 DPVNFKLLSHCLLVTLALHHPADFTPAVHASLDKFLATVATVLTSKY 140
+                  ********************************************999 PP
+
+>> HBA2_BOSMU  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.8   0.2   7.4e-31   7.4e-31       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 98.8 bits;  conditional E-value: 7.4e-31
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++++k  v++ wgkv    +e+g+e+l r++   P t+ +F  +  ls      +++++k Hg+kv +al++a+++ld+l + l++L++lHa kl+v
+   HBA2_BOSMU   2 LSAADKGNVKAAWGKVGGHAAEYGAEALERMFLSFPTTKTYFPHFD-LSH-----GSAQVKGHGAKVAAALTKAVGHLDDLPGALSELSDLHAHKLRV 93 
+                  67788899**********************************9985.443.....589**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+++++ +ftpav+a  +k +++v + l +ky
+   HBA2_BOSMU  94 DPVNFKLLSHSLLVTLASHLPSDFTPAVHASLDKFLANVSTVLTSKY 140
+                  *******************************************9999 PP
+
+>> HBA_AILME  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.8   0.1     6e-30     6e-30       4     148 ..       2     140 ..       1     141 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 95.8 bits;  conditional E-value: 6e-30
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+ ++k  v++ w k+     e+g+e+l r ++  P t+ +F  +    sp    +++++kaHgkkv  al+ a+++ld+l + l++L++lHa kl+v
+    HBA_AILME   2 LSPADKTNVKATWDKIGGHAGEYGGEALERTFASFPTTKTYFPHFD--LSP----GSAQVKAHGKKVADALTTAVGHLDDLPGALSALSDLHAHKLRV 93 
+                  67789999***********************************996..367....89***************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+++++ eftpav+a  +k + +v + l +ky
+    HBA_AILME  94 DPVNFKLLSHCLLVTLASHHPAEFTPAVHASLDKFFSAVSTVLTSKY 140
+                  *******************************************9999 PP
+
+>> HBA_MACFA  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.2   1.1e-29   1.1e-29       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 1.1e-29
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+ ++k  v++ wgkv     e+g+e+l r++   P t+ +F  +  ls      +++++k Hgkkv  al+ a++++d++ + l++L++lHa kl+v
+    HBA_MACFA   2 LSPADKTNVKAAWGKVGGHAGEYGAEALERMFLSFPTTKTYFPHFD-LSH-----GSAQVKGHGKKVADALTLAVGHVDDMPQALSALSDLHAHKLRV 93 
+                  67789999**********************************9985.443.....589**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+++++ eftpav+a  +k ++ v + l +ky
+    HBA_MACFA  94 DPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKY 140
+                  *******************************************9999 PP
+
+>> MYG_MUSAN  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.0   0.3   1.1e-29   1.1e-29       9     149 .]       3     142 ..       1     142 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 95.0 bits;  conditional E-value: 1.1e-29
+  globins_msa   9 kalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkvddenf 106
+                  ++ v ++w +v+ d + +g+++l+rl+e +Pe q+ F +++n s   +++  +++ka + +vl al++++k+++ + + +++L+++H + +k+++++f
+    MYG_MUSAN   3 WEKVNSVWSAVESDLTAIGQNILLRLFEQYPESQNHFPKFKNKSLG-ELKDTADIKAQADTVLSALGNIVKKKGSHSQPVKALAATHITTHKIPPHYF 99 
+                  7889**************************************9998.9************************************************** PP
+
+  globins_msa 107 elvgeallkvlkkkvgkeftpavqaAwskavdevaaalakkyk 149
+                    +  + ++vl + ++ e  ++vqaA+s a++ +  ++ k+yk
+    MYG_MUSAN 100 TKITTIAVDVLSEMYPSEMNAQVQAAFSGAFKIICSDIEKEYK 142
+                  *****************************************97 PP
+
+>> HBA_MACSI  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.7   0.2   1.3e-29   1.3e-29       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 94.7 bits;  conditional E-value: 1.3e-29
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+ ++k  v+  wgkv     e+g+e+l r++   P t+ +F  +  ls      +++++k Hgkkv  al+ a++++d++ + l++L++lHa kl+v
+    HBA_MACSI   2 LSPADKTNVKDAWGKVGGHAGEYGAEALERMFLSFPTTKTYFPHFD-LSH-----GSAQVKGHGKKVADALTLAVGHVDDMPQALSALSDLHAHKLRV 93 
+                  67789999**********************************9985.443.....589**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+++++ eftpav+a  +k ++ v + l +ky
+    HBA_MACSI  94 DPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKY 140
+                  *******************************************9999 PP
+
+>> HBA_FRAPO  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.2   0.1   1.8e-29   1.8e-29       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 94.2 bits;  conditional E-value: 1.8e-29
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++++k+ v+ ++gk++    ++g+e+l r+++ +P+t+ +F  +  ls      +++++k Hgkkv++al +a++++d++ +tl++L++lHa kl+v
+    HBA_FRAPO   2 LSAADKNNVKGIFGKISSHAEDYGAEALERMFITYPSTKTYFPHFD-LSH-----GSAQVKGHGKKVVAALIEAANHIDDIAGTLSKLSDLHAHKLRV 93 
+                  6788999***********************************9985.443.....589**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l+g++ l v++ +++ + tp+v+a  +k + +v + l  ky
+    HBA_FRAPO  94 DPVNFKLLGQCFLVVVAIHHPSALTPEVHASLDKFLCAVGNVLTAKY 140
+                  ************************************99999999888 PP
+
+>> HBA2_GALCR  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.0   0.4   2.2e-29   2.2e-29       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 94.0 bits;  conditional E-value: 2.2e-29
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+  +k+ v++ w+kv a   ++g+e+l r++   P t+ +F  +  ls      ++ ++k Hgkkv  al++a+ ++d++   l++L++lHa kl+v
+   HBA2_GALCR   2 LSPTDKSNVKAAWEKVGAHAGDYGAEALERMFLSFPTTKTYFPHFD-LSH-----GSTQVKGHGKKVADALTNAVLHVDDMPSALSALSDLHAHKLRV 93 
+                  6788999***********************************9984.443.....5899*************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l+ ++ll +l+ +++ eftpav+a  +k ++ v + l +ky
+   HBA2_GALCR  94 DPVNFKLLRHCLLVTLACHHPAEFTPAVHASLDKFMASVSTVLTSKY 140
+                  *******************************************9999 PP
+
+>> HBA_PAGLA  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.7   0.3   2.7e-29   2.7e-29       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 93.7 bits;  conditional E-value: 2.7e-29
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+ ++k+ +++ w k+     e+g+e+l r ++  P t+ +F  +  ls      +++++kaHgkkv  al+ a+++l++l + l++L++lHa kl+v
+    HBA_PAGLA   2 LSSADKNNIKATWDKIGSHAGEYGAEALERTFISFPTTKTYFPHFD-LSH-----GSAQVKAHGKKVADALTLAVGHLEDLPNALSALSDLHAYKLRV 93 
+                  67889999**********************************9985.443.....589**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+ +++ eftpav++A +k + +v + l +ky
+    HBA_PAGLA  94 DPVNFKLLSHCLLVTLACHHPAEFTPAVHSALDKFFSAVSTVLTSKY 140
+                  *******************************************9999 PP
+
+>> HBA_PHACO  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.6   0.1   1.2e-28   1.2e-28       4     148 ..       2     140 ..       1     141 [] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 91.6 bits;  conditional E-value: 1.2e-28
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++++k+ v+ ++ k+     e+g+e+l r+++ +P+t+ +F  +  ls      +++++k Hgkkv++al +a++++d++ +tl++L++lHa kl+v
+    HBA_PHACO   2 LSAADKNNVKGIFTKIAGHAEEYGAEALERMFITYPSTKTYFPHFD-LSH-----GSAQIKGHGKKVVAALIEAVNHIDDITGTLSKLSDLHAHKLRV 93 
+                  67889999**********************************9985.443.....589**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l+g++ l v++ +++ + tp+v+a  +k + +v + l  ky
+    HBA_PHACO  94 DPVNFKLLGQCFLVVVAIHHPSALTPEVHASLDKFLCAVGTVLTAKY 140
+                  **********************************9999999888887 PP
+
+>> HBA_PROLO  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   90.8   0.0   2.1e-28   2.1e-28       4     148 ..       2     140 ..       1     141 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 90.8 bits;  conditional E-value: 2.1e-28
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l+ ++ka +++ w k+     e+g+e+l r ++  P t+ +F  +    sp    +++++kaHgkkv  al+ a+++ld+l + l++L++lHa kl+v
+    HBA_PROLO   2 LSPADKANIKATWDKIGGHAGEYGGEALERTFASFPTTKTYFPHFD--LSP----GSAQVKAHGKKVADALTLAVGHLDDLPGALSALSDLHAYKLRV 93 
+                  67889999***********************************996..367....89***************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l++++ll +l+ +++ eftpav+a  +k +  v + l +ky
+    HBA_PROLO  94 DPVNFKLLSHCLLVTLACHHPAEFTPAVHASLDKFFTSVSTVLTSKY 140
+                  ******************************************99998 PP
+
+>> HBA_ANSSE  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.1   0.3   6.8e-28   6.8e-28       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 89.1 bits;  conditional E-value: 6.8e-28
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++++k  v++++gk+     e+g+e l r+++  P+t+ +F  +    +p    +++++kaHgkkv +al +a++++d++ + l++L++lHa+kl+v
+    HBA_ANSSE   2 LSAADKGNVKTVFGKIGGHAEEYGAETLQRMFQTFPQTKTYFPHFDL--QP----GSAQIKAHGKKVAAALVEAANHIDDIAGALSKLSDLHAQKLRV 93 
+                  67788899**********************************99953..56....89***************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+++g++ l vl+ +++   tp+v+a ++k + +va+ l  ky
+    HBA_ANSSE  94 DPVNFKFLGHCFLVVLAIHHPSLLTPEVHASMDKFLCAVATVLTAKY 140
+                  *****************************************999998 PP
+
+>> HBA_COLLI  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.7   0.1   3.9e-27   3.9e-27       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 86.7 bits;  conditional E-value: 3.9e-27
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++++k+ v+++++k+  +  + g+e+l rl++ +P+t+ +F  +  ls      +++++k Hgkkv  al +a++++d++ + l++L++lHa+kl+v
+    HBA_COLLI   2 LSANDKSNVKAVFAKIGGQAGDLGGEALERLFITYPQTKTYFPHFD-LSH-----GSAQIKGHGKKVAEALVEAANHIDDIAGALSKLSDLHAQKLRV 93 
+                  68899*************************************9985.443.....589**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l+g++ l v++ +++   tp+v+a  +k v +v + l  ky
+    HBA_COLLI  94 DPVNFKLLGHCFLVVVAVHFPSLLTPEVHASLDKFVLAVGTVLTAKY 140
+                  ************************************99999888887 PP
+
+>> HBA_TRIOC  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.0   0.1   6.3e-27   6.3e-27       4     148 ..       2     140 ..       1     141 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 86.0 bits;  conditional E-value: 6.3e-27
+  globins_msa   4 lteeekalvlkswgkvkadipevglellarllevaPetqelFdslrnlsspdavlsnpklkaHgkkvltalsdalknldnleetlasLgelHadklkv 101
+                  l++++k  v++++ k+     ++g+e l r+++ +P t+ +F  +   +      +++++kaHgkkv+ al +a++++d++ + l++L++lHa+kl+v
+    HBA_TRIOC   2 LSANDKTNVKTVFTKITGHAEDYGAETLERMFITYPPTKTYFPHFDL-H-----HGSAQIKAHGKKVVGALIEAVNHIDDIAGALSKLSDLHAQKLRV 93 
+                  68899999*********************************998843.2.....4689**************************************** PP
+
+  globins_msa 102 ddenfelvgeallkvlkkkvgkeftpavqaAwskavdevaaalakky 148
+                  d+ nf+l+g++ l v++ +++   tp+v+a  +k + +v + l+ ky
+    HBA_TRIOC  94 DPVNFKLLGQCFLVVVAIHHPSVLTPEVHASLDKFLCAVGNVLSAKY 140
+                  ****************************************9999998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (149 nodes)
+Target sequences:                         45  (6519 residues searched)
+Passed MSV filter:                        45  (1); expected 0.9 (0.02)
+Passed bias filter:                       45  (1); expected 0.9 (0.02)
+Passed Vit filter:                        45  (1); expected 0.0 (0.001)
+Passed Fwd filter:                        45  (1); expected 0.0 (1e-05)
+Initial search space (Z):                 45  [actual number of targets]
+Domain search space  (domZ):              45  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 61.28
+//
+[ok]
