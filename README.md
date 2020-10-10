@@ -1,6 +1,6 @@
 # Course5_project pipeline
 
-This pipeline takes a fasta file and makes an msa, then uses hmmbuild to create a hmmprofile and searches a given database to find more sequences matching the profile. Finally it also makes a fasta file from the hmmsearch results so it can be used again
+This pipeline takes a fasta file and makes an msa, then uses hmmbuild to create a hmmprofile and searches a given database to find more sequences matching the profile. Finally it also makes a fasta file from the hmmsearch results so it can be used again.
 
 input:
 - fasta file
@@ -13,7 +13,7 @@ output:
 - hmmsearch summary file
 - new fasta file
 
-Download msa_pipeline.py and all 4 of the esl-reformat files
+Download msa_pipeline.py and all 4 of the esl-reformat files.
 
 To test also download globins.fasta and globins45.fa
 
