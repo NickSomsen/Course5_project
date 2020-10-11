@@ -25,8 +25,6 @@ def hmmbuild(msa_input, hmmbuild_output):
     hmmbuild_output - name of file where hmm profile should be written to
     output: -
     """
-    # replace_header(msa_input)
-    # Alleen nodig als de input clustal format is.
     if not os.path.isfile(msa_input):
         # msa file bestaat niet
         print("Could not find MSA, mafft failed")
@@ -37,24 +35,6 @@ def hmmbuild(msa_input, hmmbuild_output):
     else:
         e = os.system("hmmbuild --amino {} {}".format(hmmbuild_output, msa_input))
         print("hmmbuild was successful")
-
-
-def replace_header(msa_input):
-    """ Function that replaces the original file header, with a compatible header
-    input:
-    msa_input - A file containing a multiple sequence alignment
-    output: -
-    """
-    with open(msa_input, "r") as inFile:
-        all_lines = inFile.readlines()
-    # Net als t-coffee, gaf hmmbuild ook een error dat hij de clustal header niet herkent. Ik heb toen gewoon weer die
-    # Header van het voorbeeld van t-coffee gepakt,
-    # Die wordt dan in het bestand gezet, in plaats van de originele header
-    all_lines[0] = all_lines[0].replace(all_lines[0], "CLUSTAL W (1.82) multiple sequence alignment\n")
-
-    with open(msa_input, "w") as inFile:
-        for line in all_lines:
-            inFile.write(line)
 
 
 def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, database):
