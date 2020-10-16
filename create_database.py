@@ -24,7 +24,7 @@ def get_seqs(acc_list):
     """ function that fetches sequences from Protein database by accession codes, and writes results to file
     :param acc_list: list containing all accession codes
     """
-    database_file = "databaseV2.fasta"
+    database_file = "protein_subtree_link_db.fasta"
 
     for i in range(len(acc_list)):
         print("Writing sequence from: " + str(acc_list[i]) + " to file" + " ({})".format(str(i+1) + "/" + str(len(acc_list))))
