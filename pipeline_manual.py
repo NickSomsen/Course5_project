@@ -10,6 +10,7 @@ def mafft(fasta_input, msa_output):
     output: -
     """
     if os.path.isfile(msa_output):
+        # msa bestand bestaat al
         print("MSA file already exists")
         pass
     else:
@@ -86,21 +87,21 @@ def main():
     """ This pipeline is to be run in the terminal
     """
     try:
-        fasta_input = argv[1]
         # Het fasta bestand dat je gebruikt voor de msa
-        msa_output = argv[2]
+        fasta_input = argv[1]
         # De bestandsnaam waarin de msa wordt afgeschreven (zonder extensie)
-        hmmsearch_output_file = argv[3]
+        msa_output = argv[2]
         # De naam voor de hmmsearch output bestanden (zonder extensie)
-        database = argv[4]
+        hmmsearch_output_file = argv[3]
         # De database waarin gezocht moet worden
-        fasta_results = argv[5]
+        database = argv[4]
         # De naam voor het multiple fasta bestand met de fasta sequenties van je hmmsearch (zonder extensie)
+        fasta_results = argv[5]
 
         mafft(fasta_input, msa_output)
 
         # bestand hmmbuild profiel output
-        hmmbuild_output = msa_output + ".hmm"  # het .split() is niet meer nodig, want het bestand heeft geen extensie meer
+        hmmbuild_output = msa_output + ".hmm"
         # bestanden hmmsearch output
         hmmsearch_output_alignment = hmmsearch_output_file + ".hmmsearch_alignment"
         hmmsearch_output_summary = hmmsearch_output_file + ".hmmsearch_summary"
