@@ -10,6 +10,7 @@ def mafft(fasta_input, msa_output):
     output: -
     """
     if os.path.isfile(msa_output):
+        # het MSA bestand bestaat al
         print("MSA file already exists")
         pass
     else:
@@ -86,24 +87,24 @@ def main():
     """ This pipeline is to be run in the terminal
     """
     try:
-        fasta_input = argv[1]
         # Het fasta bestand dat je gebruikt voor de msa
-        msa_output_arg = argv[2]
+        fasta_input = argv[1]
         # De bestandsnaam waarin de msa wordt afgeschreven (zonder extensie)
-        hmmsearch_output_file = argv[3]
+        msa_output_arg = argv[2]
         # De naam voor de hmmsearch output bestanden (zonder extensie)
-        fasta_results_arg = argv[4]
+        hmmsearch_output_file = argv[3]
         # De naam voor het multiple fasta bestand met de fasta sequenties van je hmmsearch (zonder extensie)
-        database = argv[5]
+        fasta_results_arg = argv[4]
         # De database waarin gezocht moet worden
-        max_iters = argv[6]
+        database = argv[5]
         # aantal iteraties dat moet worden gedaan
+        max_iters = argv[6]
 
-        results_folder = "./pipeline_results/"  # de map waarna alle resultaten geschreven moeten worden
-        first_itter = True  # een boolean die wordt gebruikt om de msa input voor mafft te reguleren
-        previous_fasta_output = ""  # om bij de locatie van de fasta output van de vorige iteratie te komen
+        results_folder = "./pipeline_results/"
+        first_itter = True
+        previous_fasta_output = ""
         for i in range(int(max_iters)):
-            current_iter = i + 1  # zodat je bij 1 begint, en niet 0
+            current_iter = i + 1
             current_result_folder = results_folder + "iter" + str(current_iter) + "_results/"
             # een map voor de huidige iteratie wordt aangemaakt, bijvoorbeeld ./pipeline_results/iter1_results/
             if os.path.isdir(current_result_folder):
@@ -132,7 +133,6 @@ def main():
 
                 # bestand waarna hmm profiel wordt geschreven
                 hmmbuild_output = current_result_folder + msa_output_arg + ".hmm"
-                # het .split(".") hoeft niet meer, omdat het bestand geen extensie meer heeft
 
                 # bestanden hmmsearch output
                 hmmsearch_output_alignment = current_result_folder + hmmsearch_output_file + ".hmmsearch_alignment"
@@ -146,11 +146,6 @@ def main():
                 previous_fasta_output = fasta_results  # zodat het script weet waar het fasta bestand van de vorige
                 # iteratie naar toe is gegaan
                 hmmsearch_to_fasta(fasta_results, hmmsearch_output_alignment)
-
-                print("*"*90)
-                print("Completed iteration number: " + str(current_iter) + ". Results were written to: " +
-                      current_result_folder)
-                print("*"*90)
 
     except IndexError:
         print("Incorrect number of command line arguments."
