@@ -36,6 +36,7 @@ def hmmbuild(msa_input, hmmbuild_output):
     else:
         e = os.system("hmmbuild --amino {} {}".format(hmmbuild_output, msa_input))
         print("hmmbuild was successful")
+    return
 
 
 def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, database):
@@ -61,6 +62,7 @@ def hmmsearch(hmm_input, hmmsearch_output_alignment, hmmsearch_output_summary, d
         # voor de soort van BLAST output
         e = os.system("hmmsearch {} {} > {}".format(hmm_input, database, hmmsearch_output_summary))
         print("hmmsearch summary file acquired successfully")
+    return
 
 
 def hmmsearch_to_fasta(fasta_results, hmmsearch_output):
@@ -81,6 +83,7 @@ def hmmsearch_to_fasta(fasta_results, hmmsearch_output):
     else:
         e = os.system("./esl-reformat -o {} -u fasta {}".format(fasta_results, hmmsearch_output))
         print("hmmsearch output successfully converted to fasta format for new iteration")
+    return
 
 
 def main():
